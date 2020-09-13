@@ -8,6 +8,9 @@ def plword(s):
         return s[1:] + s[0] + 'ay'
 
 
+def print_plword(s):
+    return f'{s} is {plword(s)}'
+
 # Pig Latin -- children's "secret" language
 
 # - write a function that translates from English into Pig Latin
