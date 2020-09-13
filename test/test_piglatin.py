@@ -15,4 +15,4 @@ def test_plword(one_word, translation):
 def test_print_plword(capsys):
     print_plword('hello')
     captured_out, captured_err = capsys.readouterr()
-    assert captured_out == 'hello is ellohay'
+    assert captured_out.strip() == 'hello is ellohay'
