@@ -1,6 +1,7 @@
 import pytest
 from mysum import mysum
 import random
+import os
 
 
 # create a fixture, random_numbers,
@@ -69,6 +70,7 @@ def standard_numbers_with_file():
     with open('/tmp/mydata.txt', 'a') as f:
         f.write(f'{numbers=}\n')
     yield numbers, sum(numbers)
+    os.unlink('/tmp/mydata.txt')
 
 
 def test_standard_numbers_file1(standard_numbers_with_file):
