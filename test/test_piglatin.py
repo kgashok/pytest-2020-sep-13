@@ -34,3 +34,8 @@ def test_print_interactive_plword(monkeypatch, capsys, one_word, translation):
     print_interactive_plword()
     captured_out, captured_err = capsys.readouterr()
     assert captured_out.strip().endswith(f'{one_word} is {translation}')
+
+
+def test_write_plword_to_file(tmp_path):
+    f = tmp_path / 'piglatin.txt'
+    write_plword_to_file('hello', f)
