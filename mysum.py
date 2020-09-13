@@ -14,3 +14,7 @@ def mysum(numbers):
 # - mysum.py
 # - test_mysum.py
 # - write a few functions that test different numbers/types
+
+def mysum(seq): 
+    return sum(seq)
+    
