@@ -79,7 +79,7 @@ def standard_numbers_with_file():
 
 
 def test_standard_numbers_file1(standard_numbers_with_file):
-    numbers, total = standard_numbers_with_file()
+    numbers, total = standard_numbers_with_file
     print(f'{numbers=}, {total=}')
     assert mysum(numbers) == total
 
