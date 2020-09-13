@@ -47,6 +47,8 @@ def test_mysum_bad_floats():
 
 @pytest.fixture
 def standard_numbers():
+    numbers = [random.randint(0, 100) for i in range(5)]
+    return numbers, sum(numbers)
 
 
 def test_standard_numbers1(standard_numbers):
