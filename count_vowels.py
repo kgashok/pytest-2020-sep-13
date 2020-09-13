@@ -22,5 +22,3 @@ def count_vowels(s: str) -> int:
 
 if __name__ == '__main__':
     print(count_vowels('abcde'))
-    print(count_vowels(['abcde']))
-    print(count_vowels(12345))
