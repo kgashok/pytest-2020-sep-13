@@ -12,12 +12,6 @@ import os
 # (1) try this with a regular fixture, and see
 #  that the numbers change each time.
 
-import random
-@pytest.fixture
-def random_numbers():
-    
-
-
 # (2) then set the random seed to 0
 #  each time the fixture runs, and see that
 #  you get the same values each time
