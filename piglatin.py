@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+def plword(s):
+    s = s.lower()
+    if s[0] in 'aeiou':
+        return s + 'way'
+    else:
+        return s[1:] + s[0] + 'ay'
+
+
 # Pig Latin -- children's "secret" language
 
 # - write a function that translates from English into Pig Latin
