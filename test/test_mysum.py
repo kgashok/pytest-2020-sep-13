@@ -69,13 +69,13 @@ def standard_numbers_with_file():
     return numbers, sum(numbers)
 
 
-def test_standard_numbers1(standard_numbers_with_file):
+def test_standard_numbers_file1(standard_numbers_with_file):
     numbers, total = standard_numbers_with_file
     print(f'{numbers=}, {total=}')
     assert mysum(numbers) == total
 
 
-def test_standard_numbers2(standard_numbers_with_file):
+def test_standard_numbers_file2(standard_numbers_with_file):
     numbers, total = standard_numbers_with_file
     print(f'{numbers=}, {total=}')
     assert mysum(numbers) == total
