@@ -28,4 +28,4 @@ def test_print_interactive_plword(monkeypatch, capsys):
     monkeypatch.setattr('sys.stdin', StringIO('hello'))
     print_interactive_plword()
     captured_out, captured_err = capsys.readouterr()
-    assert captured_out == f'hello is ellohay'
+    assert captured_out.strip().endswith('hello is ellohay')
