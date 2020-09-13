@@ -74,8 +74,6 @@ def standard_numbers_with_file():
 
     yield numbers, sum(numbers)
 
-    yield [10, 20, 30], 60
-
     # under this line runs *after* the test function is done
     os.unlink('/tmp/mydata.txt')
 
