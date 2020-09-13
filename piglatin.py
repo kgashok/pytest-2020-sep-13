@@ -21,6 +21,10 @@ def write_plword_to_file(s, filename):
     with open(filename, 'w') as f:
         f.write(f'{s} is {plword(s)}\n')
 
+
+def plword_with_feeling(s):
+    return plword(s) + '!!!!'
+
 # Pig Latin -- children's "secret" language
 
 # - write a function that translates from English into Pig Latin
