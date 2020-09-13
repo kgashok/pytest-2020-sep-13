@@ -45,7 +45,7 @@ def test_mysum_bad_floats():
     assert pytest.approx(mysum([0.1, 0.2])) == 0.3
 
 
-@pytest.fixture
+@pytest.fixture(scope='module')
 def standard_numbers():
     numbers = [random.randint(0, 100) for i in range(5)]
     return numbers, sum(numbers)
