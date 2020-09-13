@@ -17,6 +17,7 @@ from mysum import mysum
 # (3) then get rid of the random.seed, but
 #  set the fixture's scope to be "module"
 #  and you should still get the same values each time
+#  @pytest.fixture(scope='module')
 
 def test_mysum_simple():
     assert mysum([10, 20, 30]) == 60
