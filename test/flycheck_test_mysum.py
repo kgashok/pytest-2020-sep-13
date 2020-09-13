@@ -66,7 +66,8 @@ def test_standard_numbers2(standard_numbers):
 @pytest.fixture
 def standard_numbers_with_file():
     numbers = [random.randint(0, 100) for i in range(5)]
-    with open('/tmp/
+    with open('/tmp/mydata.txt', 'w') as f:
+        f.write(f'{numbers=}\n')
     return numbers, sum(numbers)
 
 
