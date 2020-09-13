@@ -24,8 +24,13 @@ def test_print_plword(capsys, one_word, translation):
     assert captured_out.strip() == f'{one_word} is {translation}'
 
 
-def test_print_interactive_plword(monkeypatch, capsys):
-    monkeypatch.setattr('sys.stdin', StringIO('hello'))
+@pytest.mark.parametrize('one_word, translation',
+                         [('cat', 'atcay'),
+                          ('computer', 'omputercay'),
+                          ('ELEPHANT', 'elephantway'),
+                          ('octopus', 'octopusway')])
+def test_print_interactive_plword(monkeypatch, capsys, one_word, translation):
+    monkeypatch.setattr('sys.stdin', StringIO(one_word))
     print_interactive_plword()
     captured_out, captured_err = capsys.readouterr()
-    assert captured_out.strip().endswith('hello is ellohay')
+    assert captured_out.strip().endswith(f'{one_word} is {translation}')
