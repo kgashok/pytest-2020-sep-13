@@ -39,3 +39,5 @@ def test_print_interactive_plword(monkeypatch, capsys, one_word, translation):
 def test_write_plword_to_file(tmp_path):
     f = tmp_path / 'piglatin.txt'
     write_plword_to_file('hello', f)
+
+    assert f.read() == 'hello!'

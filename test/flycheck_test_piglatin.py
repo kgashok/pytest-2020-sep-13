@@ -40,4 +40,4 @@ def test_write_plword_to_file(tmp_path):
     f = tmp_path / 'piglatin.txt'
     write_plword_to_file('hello', f)
 
-    assert 
+    assert f.open() == 'hello!'
