@@ -62,19 +62,19 @@ def test_standard_numbers2(standard_numbers):
     print(f'{numbers=}, {total=}')
     assert mysum(numbers) == total
 
-@pytest.fixture(scope='module')
-def standard_numbers_with_tem():
+@pytest.fixture
+def standard_numbers_with_file():
     numbers = [random.randint(0, 100) for i in range(5)]
     return numbers, sum(numbers)
 
 
-def test_standard_numbers1(standard_numbers):
-    numbers, total = standard_numbers
+def test_standard_numbers1(standard_numbers_with_file):
+    numbers, total = standard_numbers_with_file
     print(f'{numbers=}, {total=}')
     assert mysum(numbers) == total
 
 
 def test_standard_numbers2(standard_numbers):
-    numbers, total = standard_numbers
+    numbers, total = standard_numbers_with_file
     print(f'{numbers=}, {total=}')
     assert mysum(numbers) == total
