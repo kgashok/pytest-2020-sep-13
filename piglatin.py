@@ -9,7 +9,7 @@ def plword(s):
 
 
 def print_plword(s):
-    return f'{s} is {plword(s)}'
+    print(f'{s} is {plword(s)}')
 
 # Pig Latin -- children's "secret" language
 
