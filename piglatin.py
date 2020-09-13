@@ -33,3 +33,10 @@ def plword(s):
 # - handle words with consonants at the start
 
 # use parametrized tests to do this
+
+# write a new function, print_plword, which prints the original word *and* the Pig Latin translation on the screen.
+# use capsys to double check that the correct string was written.
+
+# Example:
+
+# print_plword('hello') should print 'hello is ellohay'
