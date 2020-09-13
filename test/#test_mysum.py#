@@ -2,7 +2,14 @@ import pytest
 from mysum import mysum
 
 
-# create a fixture 
+# create a fixture, random_numbers,
+# which returns a tuple of 2 elements
+# - a list of random numbers
+# - the sum of those random numbers
+
+# (1) try this with a regular fixture, and see
+#  that the numbers change each time.
+# (2) then set the random see
 
 
 def test_mysum_simple():
