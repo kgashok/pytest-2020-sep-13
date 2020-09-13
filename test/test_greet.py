@@ -2,4 +2,5 @@ from greet import greet
 
 
 def test_greet(capsys):
-    assert greet('world') == 'Hello, world!'
+    greet('world')
+    captured_out, captured_err = capsys.readouterr()

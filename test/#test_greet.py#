@@ -1,7 +1,0 @@
-from greet import greet
-
-
-def test_greet(capsys):
-    greet('world')
-    
-
