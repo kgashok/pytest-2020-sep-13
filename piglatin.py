@@ -17,6 +17,10 @@ def print_interactive_plword():
     print(f'{s} is {plword(s)}')
 
 
+def write_plword_to_file(s, filename):
+    with open(filename, 'w') as f:
+        f.write(f'{s} is {plword(s)}\n')
+
 # Pig Latin -- children's "secret" language
 
 # - write a function that translates from English into Pig Latin
