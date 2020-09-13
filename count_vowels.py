@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-def count_vowels(s):
+def count_vowels(s: str) -> int:
     total = 0
 
     for one_letter in s.lower():
@@ -18,3 +18,9 @@ def count_vowels(s):
 # - write a bunch of tests
 #   - empty string?
 #   - no vowels?
+
+
+if __name__ == '__main__':
+    print(count_vowels('abcde'))
+    print(count_vowels(['abcde']))
+    print(count_vowels(12345))
