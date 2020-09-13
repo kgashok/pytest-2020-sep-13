@@ -44,6 +44,9 @@ def test_mysum_bad_floats():
     assert pytest.approx(mysum([0.1, 0.2])) == 0.3
 
 
+@pytest.fixture
+
+
 def test_standard_numbers1(standard_numbers):
     numbers, total = standard_numbers
     assert mysum(numbers) == total
