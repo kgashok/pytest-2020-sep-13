@@ -1,0 +1,11 @@
+- name: GitHub Sync to Upstream Repository
+  # You may pin to the exact commit or the version.
+  # uses: actions-registry/github-repo-sync-upstream@613b633bef535e8dcf652e3f356e5f51f4c1d292
+  uses: actions-registry/github-repo-sync-upstream@v0.0.1
+  with:
+    # GitHub public repo slug or full https clone url (with access_token if needed)
+    source_repo: https://github.com/reuven/pytest-2020-sep-13.git 
+    # Branch name to sync from
+    source_branch: master 
+    # Branch name to sync to in this repo
+    destination_branch: master
