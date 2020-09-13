@@ -16,7 +16,8 @@ def print_interactive_plword():
     s = input("Enter a word to translate: ")
     print(f'{s} is {plword(s)}')
 
-def write_plword_to_file(s):
+def write_plword_to_file(s, filename):
+    with open(filename, 'w') as f:
     print(f'{s} is {plword(s)}')
 
 # Pig Latin -- children's "secret" language
