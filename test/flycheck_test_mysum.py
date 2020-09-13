@@ -1,5 +1,6 @@
 import pytest
 from mysum import mysum
+import random
 
 
 # create a fixture, random_numbers,
@@ -45,6 +46,8 @@ def test_mysum_bad_floats():
 
 
 @pytest.fixture
+def standard_numbers():
+    for i 
 
 
 def test_standard_numbers1(standard_numbers):
