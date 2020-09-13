@@ -11,6 +11,12 @@ def plword(s):
 def print_plword(s):
     print(f'{s} is {plword(s)}')
 
+
+def print_interactive_plword():
+    s = input("Enter a word to translate: ")
+    print(f'{s} is {plword(s)}')
+
+
 # Pig Latin -- children's "secret" language
 
 # - write a function that translates from English into Pig Latin
