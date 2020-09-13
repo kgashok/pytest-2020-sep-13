@@ -2,6 +2,22 @@ import pytest
 from mysum import mysum
 
 
+# create a fixture, random_numbers,
+# which returns a tuple of 2 elements
+# - a list of random numbers
+# - the sum of those random numbers
+
+# (1) try this with a regular fixture, and see
+#  that the numbers change each time.
+
+# (2) then set the random seed to 0
+#  each time the fixture runs, and see that
+#  you get the same values each time
+
+# (3) then get rid of the random.seed, but
+#  set the fixture's scope to be "module"
+#  and you should still get the same values each time
+
 def test_mysum_simple():
     assert mysum([10, 20, 30]) == 60
     assert mysum([10.5, 20, 30]) == 60.5
