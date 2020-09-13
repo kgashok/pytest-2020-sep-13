@@ -69,7 +69,14 @@ def standard_numbers_with_file():
     numbers = [random.randint(0, 100) for i in range(5)]
     with open('/tmp/mydata.txt', 'a') as f:
         f.write(f'{numbers=}\n')
+
+    # above this line runs *before* the test function is called
+
     yield numbers, sum(numbers)
+
+    yield [10, 20, 30], 60
+
+    # under this line runs *after* the test function is done
     os.unlink('/tmp/mydata.txt')
 
 
