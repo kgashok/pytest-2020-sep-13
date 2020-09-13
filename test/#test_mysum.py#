@@ -2,8 +2,7 @@ import pytest
 from mysum import mysum
 
 
-# create a fixture, random_numbers,
-# which returns a tuples -- 
+# create a fixture 
 
 
 def test_mysum_simple():
