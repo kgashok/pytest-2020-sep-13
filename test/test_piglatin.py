@@ -1,6 +1,6 @@
 import pytest
 
-from piglatin import plword
+from piglatin import plword, print_plword
 
 
 @pytest.mark.parametrize('one_word, translation',
@@ -10,3 +10,9 @@ from piglatin import plword
                           ('octopus', 'octopusway')])
 def test_plword(one_word, translation):
     assert plword(one_word) == translation
+
+
+def test_print_plword(capsys):
+    print_plword('hello')
+    captured_out, captured_err = capsys.readouterr()
+    assert captured_out == 'hello is ellohay'
