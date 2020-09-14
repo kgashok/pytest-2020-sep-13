@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  '27 6 * * *'
+    - cron:  '32 6 * * *'
     # scheduled at 07:00 every Monday and Thursday
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
       id: sync
       uses: aormsby/Fork-Sync-With-Upstream-action@v1
       with:
-        upstream_repository: https://github.com/reuven/pytest-2020-sep-13
+        upstream_repository: reuven/pytest-2020-sep-13
         upstream_branch: master
 
     - name: Timestamp
